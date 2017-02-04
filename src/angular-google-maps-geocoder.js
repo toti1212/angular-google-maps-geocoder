@@ -1,14 +1,5 @@
 var agmg = angular.module('angular-google-maps-geocoder', ['ui.bootstrap']);
 
-agmg.provider('angular-google-maps-geocoder-config',[ function() {
-    this.options = {
-      country: ''
-    };
-    this.configure = function(options) {
-      angular.extend(this.options, options);
-    };
-}]);
-
 agmg.filter('trustAsHtml', ['$sce', function($sce){
     return function(text) {
         console.log(text);
