@@ -1,11 +1,12 @@
 {
-  "name": "angular-google-maps-geocoder",
-  "version": "0.0.3",
+  "name": "angular-google-maps-geocoder-for-uy",
+  "version": "1.0.0",
   "homepage": "https://github.com/alexandernst/angular-google-maps-geocoder",
   "authors": [
+    "Rodrigo Suarez <rodrigosrz12@gmail.com>"
     "Alexander Nestorov <alexandernst@gmail.com>"
   ],
-  "description": "Angular bindings for the wonderful speakingurl library",
+  "description": "Angular bindings for the wonderful speakingurl library, only for Uruguay",
   "main": "dist/angular-google-maps-geocoder.min.js",
   "keywords": [
     "angular",

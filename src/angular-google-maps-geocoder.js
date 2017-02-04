@@ -1,5 +1,14 @@
 var agmg = angular.module('angular-google-maps-geocoder', ['ui.bootstrap']);
 
+agmg.provider('angular-google-maps-geocoder-config',[ function() {
+    this.options = {
+      country: ''
+    };
+    this.configure = function(options) {
+      angular.extend(this.options, options);
+    };
+}]);
+
 agmg.filter('trustAsHtml', ['$sce', function($sce){
     return function(text) {
         console.log(text);
@@ -49,7 +58,7 @@ agmg.service("geocoder", ["$q", function($q) {
         var self = this;
         var defer = $q.defer();
 
-        geocoder.geocode({ placeId: place_id }, function(results, status) {
+        geocoder.geocode({ placeId: place_id, componentRestrictions: { country: 'UY'} }, function(results, status) {
             self.handle_reply(defer, results, status);
         });
 
@@ -60,7 +69,7 @@ agmg.service("geocoder", ["$q", function($q) {
         var self = this;
         var defer = $q.defer();
 
-        geocoder.geocode({ address: query }, function(results, status) {
+        geocoder.geocode({ address: query, componentRestrictions: { country: 'UY'} }, function(results, status) {
             self.handle_reply(defer, results, status);
         });
 
